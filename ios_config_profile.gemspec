@@ -1,0 +1,25 @@
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'ios_config_profile/version'
+
+Gem::Specification.new do |spec|
+  spec.name          = "ios_config_profile"
+  spec.version       = IOSConfigProfile::VERSION
+  spec.authors       = ["Albert Wang"]
+  spec.email         = ["albert@cellabus.com"]
+  spec.description   = %q{Generate Apple iOS configuration profiles and payloads}
+  spec.summary       = %q{This gem provides an easy way to generate configuration profiles for use with Apple iOS devices. These profiles and payloads can be delivered via Apple MDM, Apple's Configurator, or the iPhone Configuration Utility (IPCU).}
+  spec.homepage      = "https://github.com/cellabus/ios_config_profile"
+
+  spec.files         = `git ls-files`.split($/)
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
+
+  spec.add_dependency "CFPropertyList", "~> 2.2"
+  spec.add_dependency "plist", "~> 3.1"
+  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec", "~> 3.2"
+end
