@@ -12,10 +12,6 @@ module IOSConfigProfile
       merge! command_payload
     end
 
-    def install_profile(&block)
-      self.command = InstallProfilePayload.new &block
-    end
-
     private
 
     def command_payload
