@@ -1,7 +1,8 @@
 require 'ios_config_profile'
 
+# Used for MDM protocols
 module IOSConfigProfile
-  class CommandPayload < Hash
+  class MDMPayload < Hash
     include IOSConfigProfile::BasicPayload
 
     attr_reader :command

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe IOSConfigProfile::CommandPayload do
-  subject { IOSConfigProfile::CommandPayload.new 'command' }
+describe IOSConfigProfile::MDMPayload do
+  subject { IOSConfigProfile::MDMPayload.new 'command' }
 
   its(:command) { should == 'command' }
 

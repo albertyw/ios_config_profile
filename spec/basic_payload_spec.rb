@@ -19,21 +19,21 @@ describe IOSConfigProfile::BasicPayload do
     end
   end
 
-  describe '#to_encrypted_payload' do
+  describe '#to_configuration_payload' do
     let(:payload) { Payload.new }
 
-    subject { payload.to_encrypted_payload }
+    subject { payload.to_configuration_payload }
 
-    it { is_expected.to be_an IOSConfigProfile::EncryptedPayload }
+    it { is_expected.to be_an IOSConfigProfile::ConfigurationPayload }
     its(:payload) { should == 'payload in plist format' }
   end
 
-  describe '#to_command_payload' do
+  describe '#to_mdm_payload' do
     let(:payload) { Payload.new }
 
-    subject { payload.to_command_payload }
+    subject { payload.to_mdm_payload }
 
-    it { is_expected.to be_a IOSConfigProfile::CommandPayload }
+    it { is_expected.to be_a IOSConfigProfile::MDMPayload }
     its(:command) { should == payload }
   end
 

@@ -4,12 +4,12 @@ module IOSConfigProfile
       SecureRandom.uuid
     end
 
-    def to_command_payload
-      CommandPayload.new(self)
+    def to_mdm_payload
+      MDMPayload.new(self)
     end
 
-    def to_encrypted_payload
-      EncryptedPayload.new(self)
+    def to_configuration_payload
+      ConfigurationPayload.new(self)
     end
 
     private

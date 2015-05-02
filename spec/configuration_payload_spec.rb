@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe IOSConfigProfile::EncryptedPayload do
+describe IOSConfigProfile::ConfigurationPayload do
   let(:wrapped_payload) { double to_plist: 'wrapped payload in plist form' }
 
-  subject { IOSConfigProfile::EncryptedPayload.new wrapped_payload }
+  subject { IOSConfigProfile::ConfigurationPayload.new wrapped_payload }
 
   its(:payload) { should == 'wrapped payload in plist form' }
 
