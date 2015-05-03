@@ -1,7 +1,7 @@
 module IOSConfigProfile
   module BasicPayload
     def uuid
-      @uuid ||= random_uuid
+      SecureRandom.uuid
     end
 
     def to_command_payload
@@ -13,10 +13,6 @@ module IOSConfigProfile
     end
 
     private
-
-    def random_uuid
-      SecureRandom.uuid
-    end
 
     def require_attributes(*names)
       names.each { |name| require_attribute name }
