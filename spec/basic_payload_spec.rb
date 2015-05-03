@@ -28,15 +28,6 @@ describe IOSConfigProfile::BasicPayload do
     its(:payload) { should == 'payload in plist format' }
   end
 
-  describe '#to_mdm_payload' do
-    let(:payload) { Payload.new }
-
-    subject { payload.to_mdm_payload }
-
-    it { is_expected.to be_a IOSConfigProfile::MDMPayload }
-    its(:command) { should == payload }
-  end
-
   describe "#require_attributes" do
     it "will check for multiple attributes" do
       payload.send(:require_attributes, :to_plist, :uuid)

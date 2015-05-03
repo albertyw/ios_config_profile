@@ -4,10 +4,6 @@ module IOSConfigProfile
       SecureRandom.uuid
     end
 
-    def to_mdm_payload
-      MDMPayload.new(self)
-    end
-
     def to_configuration_payload
       ConfigurationPayload.new(self)
     end

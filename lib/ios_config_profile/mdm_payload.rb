@@ -5,19 +5,19 @@ module IOSConfigProfile
   class MDMPayload < Hash
     include IOSConfigProfile::BasicPayload
 
-    attr_reader :command
-
-    def initialize(command)
-      @command = command
-      require_attributes :command
+    def initialize
       merge! command_payload
     end
 
-    private
+    def make_payload
+      {}
+    end
+
+    protected
 
     def command_payload
       {
-        'Command' => command,
+        'Command' => make_payload,
         'CommandUUID' => uuid
       }
     end
