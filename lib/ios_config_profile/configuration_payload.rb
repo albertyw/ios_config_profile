@@ -1,5 +1,6 @@
 module IOSConfigProfile
   class ConfigurationPayload < IOSCertEnrollment::Profile
+
     def initialize(payload)
       super()
       self.payload = payload.to_plist

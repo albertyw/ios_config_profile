@@ -13,4 +13,15 @@ describe IOSConfigProfile::ConfigurationPayload do
   its(:description) { should be }
   its(:display_name) { should be }
   its(:organization) { should be }
+
+  describe "#encrypted_configuration" do
+    it "can encrypt configuration" do
+      profile = double certificate: 'asdf'
+      expect(subject).to receive(:encrypt).and_return(profile)
+      expect(subject).to receive(:configuration)
+      subject.encrypted_configuration(['cert'])
+    end
+  end
+
+  its(:payload) { should be }
 end

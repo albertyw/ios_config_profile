@@ -7,7 +7,25 @@ Gem for creating and manipulating Apple Configuration Profiles and Mobile
 Device Management (MDM) Protocols
 
 # Usage
-TODO
+
+There are two types of payloads - Configuration and MDM payloads.  They are
+both configured the same:
+
+```ruby
+payload = RemoveDocPayload('asdf')
+payload           # {"Command"=>{"RequestType"=>"RemoveMedia",
+payload.to_plist  # '<?xml version=\"1.0\" encoding...'
+
+payload = AppLockPayload('1234')
+payload           # {"PayloadContent"=>[{"App"=>{"Identifier"=>"1234"}, ...
+payload.to_plist  # '<?xml version=\"1.0\" encoding...'
+```
+
+Configuration payloads can be encrypted:
+
+```ruby
+payload = AppLockPayload
+```
 
 # Development
 To run tests - `bundle exec rspec`

@@ -3,6 +3,15 @@ require 'spec_helper'
 describe IOSConfigProfile::RemoveDocPayload do
   subject { IOSConfigProfile::RemoveDocPayload }
 
+  it "is a hash" do
+    payload = subject.new '1234'
+    expect(payload).to be_a Hash
+  end
+  it "can be turned into a plist " do
+    payload = subject.new '1234'
+    expect(payload.to_plist).to include 'plist'
+  end
+
   describe "#initialize" do
     it "must be initialized with a doc's url" do
       payload = subject.new '1234'
