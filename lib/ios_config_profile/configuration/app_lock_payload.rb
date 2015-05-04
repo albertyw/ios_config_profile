@@ -1,6 +1,5 @@
 module IOSConfigProfile
-  class AppLockPayload < Hash
-    include IOSConfigProfile::BasicPayload
+  class AppLockPayload < ConfigurationPayload
 
     attr_accessor :app_bundle_id
 

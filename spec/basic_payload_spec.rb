@@ -19,15 +19,6 @@ describe IOSConfigProfile::BasicPayload do
     end
   end
 
-  describe '#to_configuration_payload' do
-    let(:payload) { Payload.new }
-
-    subject { payload.to_configuration_payload }
-
-    it { is_expected.to be_an IOSConfigProfile::ConfigurationPayload }
-    its(:payload) { should == 'payload in plist format' }
-  end
-
   describe "#require_attributes" do
     it "will check for multiple attributes" do
       payload.send(:require_attributes, :to_plist, :uuid)

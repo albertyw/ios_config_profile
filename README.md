@@ -24,7 +24,11 @@ payload.to_plist  # '<?xml version=\"1.0\" encoding...'
 Configuration payloads can be encrypted:
 
 ```ruby
-payload = AppLockPayload
+p7sign = IOSCertEnrollment::Sign.verify_response(data)
+if IOSCertEnrollment::Sign.verify_signer(p7sign)
+    payload = AppLockPayload('1234')
+    encrypted_payload = payload.encrypt p7sign.certificates
+end
 ```
 
 # Development

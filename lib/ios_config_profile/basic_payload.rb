@@ -4,10 +4,6 @@ module IOSConfigProfile
       SecureRandom.uuid
     end
 
-    def to_configuration_payload
-      ConfigurationPayload.new(self)
-    end
-
     private
 
     def require_attributes(*names)
