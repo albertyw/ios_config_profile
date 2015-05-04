@@ -4,14 +4,6 @@ module IOSConfigProfile
       SecureRandom.uuid
     end
 
-    def to_command_payload
-      CommandPayload.new(self)
-    end
-
-    def to_encrypted_payload
-      EncryptedPayload.new(self)
-    end
-
     private
 
     def require_attributes(*names)
