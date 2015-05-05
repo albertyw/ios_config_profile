@@ -58,6 +58,11 @@ describe IOSConfigProfile::VPNPayload do
   end
 
   describe "#get_ipsec_config" do
-
+    let(:config) { {vpn_type: 'IPSec', remote_address: 'asdf.com'} }
+    subject {IOSConfigProfile::VPNPayload.new config }
+    it "returns the IPSec configuration" do
+      config = subject.send :get_ipsec_config
+      expect(config['RemoteAddress']).to eq 'asdf.com'
+    end
   end
 end
