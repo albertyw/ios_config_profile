@@ -45,4 +45,19 @@ describe IOSConfigProfile::VPNPayload do
       expect(subject.send :get_vendor_config).to eq 'asdf'
     end
   end
+
+  describe "#get_l2tp_config" do
+    let(:config) { {vpn_type: 'L2TP', auth_name: 'name', auth_password: 'password', comm_remote_access: 'asdf.com'} }
+    subject {IOSConfigProfile::VPNPayload.new config }
+    it "returns the l2tp configuration" do
+      config = subject.send :get_l2tp_config
+      expect(config['AuthName']).to eq 'name'
+      expect(config['TokenCard']).to eq false
+      expect(config['CommRemoteAccess']).to eq 'asdf.com'
+    end
+  end
+
+  describe "#get_ipsec_config" do
+
+  end
 end

@@ -53,7 +53,17 @@ module IOSConfigProfile
     end
 
     def get_l2tp_config
-      {} # TODO
+      {
+        'AuthName' => vpn_config[:auth_name],
+        'AuthPassword' => vpn_config[:auth_password],
+        'TokenCard' => false,
+        'CommRemoteAccess' => vpn_config[:comm_remote_access],
+        'AuthEAPPlugins' => [],
+        'AuthProtocol' => [],
+        'CCPMPPE40Enabled' => false,
+        'CCPMPPE128Enabled' => false,
+        'CCPEnabled' => false,
+      }
     end
 
     def get_ipsec_config
