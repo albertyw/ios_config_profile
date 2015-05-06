@@ -63,6 +63,13 @@ describe IOSConfigProfile::VPNPayload do
     it "returns the IPSec configuration" do
       config = subject.send :get_ipsec_config
       expect(config['RemoteAddress']).to eq 'asdf.com'
+      expect(config.include? 'LocalIdentifier').to be_falsey
+    end
+    it "adds in local identifier if using shared secret" do
+      subject.vpn_config[:authentication_method] = 'SharedSecret'
+      subject.vpn_config[:local_identifier] = 'asdf'
+      config = subject.send :get_ipsec_config
+      expect(config['LocalIdentifier']).to eq 'asdf'
     end
   end
 end

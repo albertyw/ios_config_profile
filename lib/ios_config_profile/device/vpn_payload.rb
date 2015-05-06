@@ -67,17 +67,22 @@ module IOSConfigProfile
     end
 
     def get_ipsec_config
-      {
+      config = {
         'RemoteAddress' => vpn_config[:remote_address],
         'AuthenticationMethod' => vpn_config[:authentication_method],
         'XAuthName' => vpn_config[:x_auth_name],
         'XAuthEnabled' => vpn_config[:x_auth_enabled],
-        'LocalIdentifier' => vpn_config[:local_identifier],
-        'LocalIdentifierType' => vpn_config[:local_identifier_type],
         'SharedSecret' => vpn_config[:shared_secret],
         'PayloadCertificateUUID' => vpn_config[:payload_certificate_uuid],
         'PromptForVPNPIN' => vpn_config[:prompt_for_vpn_pin],
       }
+      if vpn_config[:authentication_method] == 'SharedSecret'
+        config.merge!({
+          'LocalIdentifier' => vpn_config[:local_identifier],
+          'LocalIdentifierType' => vpn_config[:local_identifier_type],
+        })
+      end
+      config
     end
   end
 end
