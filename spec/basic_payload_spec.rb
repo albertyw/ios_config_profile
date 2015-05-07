@@ -14,7 +14,7 @@ describe IOSConfigProfile::BasicPayload do
   describe "#uuid" do
     it "returns a uuid" do
       uuid1 = payload.uuid
-      uuid2 = payload.uuid
+      uuid2 = Payload.new.uuid
       expect(uuid1).to_not eq uuid2
     end
   end
