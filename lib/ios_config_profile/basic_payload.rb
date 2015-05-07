@@ -1,7 +1,9 @@
 module IOSConfigProfile
   module BasicPayload
     def uuid
-      SecureRandom.uuid
+      # Note that this should be cached so that external code can read the
+      # uuid of a given payload without having to parse the payload itself
+      @uuid ||= random_uuid
     end
 
     def to_command_payload
@@ -13,6 +15,10 @@ module IOSConfigProfile
     end
 
     private
+
+    def random_uuid
+      SecureRandom.uuid
+    end
 
     def require_attributes(*names)
       names.each { |name| require_attribute name }
