@@ -1,3 +1,11 @@
+## 0.2.0 (2015-06-07)
+
+Features:
+
+ - Add SCEPPayload
+ - Add InstallMarketAppPayload
+ - Add WebClipPayload
+
 ## 0.1.0 (2015-05-07)
 
 Features:
