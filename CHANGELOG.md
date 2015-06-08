@@ -1,3 +1,11 @@
+## 0.3.0 (2015-06-08)
+
+Features:
+
+ - Add EnrollmentPayload
+ - Add MDMPayload
+ - Add SecurityPayload
+
 ## 0.2.0 (2015-06-07)
 
 Features:
