@@ -12,7 +12,7 @@ describe IOSConfigProfile::SecurityPayload do
       'PayloadIdentifier' => 'com.cellabusipcu.profile.credential',
       'PayloadDisplayName' => 'Security',
       'PayloadDescription' => 'Provides device authentication (certificate or identity).',
-      'PayloadOrganization' => ''
+      'PayloadOrganization' => 'Cellabus, Inc.'
     }
   end
 

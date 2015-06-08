@@ -30,7 +30,7 @@ module IOSConfigProfile
         'PayloadIdentifier' => 'com.cellabusipcu.profile.mdm',
         'PayloadDisplayName' => 'Mobile Device Management',
         'PayloadDescription' => 'Configures Mobile Device Management',
-        'PayloadOrganization' => ''
+        'PayloadOrganization' => 'Cellabus, Inc.'
       }
     end
   end
