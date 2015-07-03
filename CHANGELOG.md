@@ -1,3 +1,9 @@
+## 1.0.0 (2015-07-03)
+
+Features:
+
+ - Add many payloads
+
 ## 0.3.0 (2015-06-08)
 
 Features:
