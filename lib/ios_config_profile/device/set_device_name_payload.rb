@@ -17,4 +17,4 @@ class IOSConfigProfile::SetDeviceNamePayload < Hash
         'Settings' => [{ 'Item' => 'DeviceName', 'DeviceName' => new_device_name}]
     }
   end
-  end
+end
