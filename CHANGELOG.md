@@ -1,3 +1,9 @@
+## 1.1.0 (2015-09-25)
+
+Features:
+
+ - Add RemoveBookPayload
+
 ## 1.0.0 (2015-07-03)
 
 Features:
