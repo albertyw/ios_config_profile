@@ -12,4 +12,7 @@ describe IOSConfigProfile::EnrollmentPayload do
   end
 
   it { is_expected.to eq([security_payload, mdm_payload]) }
+  it 'can be turned into encrypted payload' do
+    subject.to_encrypted_payload
+  end
 end

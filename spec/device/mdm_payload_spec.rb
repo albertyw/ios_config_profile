@@ -22,17 +22,20 @@ describe IOSConfigProfile::MDMPayload do
       'PayloadOrganization' => 'Cellabus, Inc.'
     }
   end
+  let(:url) { 'https://example.com' }
+  let(:security_payload) { double uuid: '11111111-1111-1111-1111-111111111111' }
+  let(:topic) { 'user id from apple push notification certificate' }
 
   before do
     allow_any_instance_of(IOSConfigProfile::MDMPayload).to receive_messages random_uuid: "00000000-0000-0000-0000-000000000000"
   end
 
   subject do
-    url = 'https://example.com'
-    security_payload = double uuid: '11111111-1111-1111-1111-111111111111'
-    topic = 'user id from apple push notification certificate'
     IOSConfigProfile::MDMPayload.new(url, security_payload, topic)
   end
 
   it { is_expected.to eq(mdm_payload_attributes) }
+  it 'requires an https url' do
+    expect{IOSConfigProfile::MDMPayload.new('http://example.com', security_payload, topic)}.to raise_error RuntimeError
+  end
 end

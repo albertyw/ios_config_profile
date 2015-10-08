@@ -5,6 +5,7 @@ module IOSConfigProfile
     attr_reader :url, :security_payload, :topic
 
     def initialize(url, security_payload, topic)
+      raise RuntimeError, "url must be https" if url[0,5] != 'https'
       @url, @security_payload, @topic = url, security_payload, topic
       require_attributes :url, :topic, :security_payload
       replace mdm_payload
