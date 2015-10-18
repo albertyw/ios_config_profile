@@ -1,3 +1,10 @@
+## 1.2.0 (2015-10-18)
+
+Features
+
+  - Support new iOS 9.0 Restriction keys
+  - Update existing Restrictions according to changes from Apple
+
 ## 1.1.0 (2015-09-25)
 
 Features:
