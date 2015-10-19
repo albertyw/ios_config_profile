@@ -31,7 +31,6 @@ class IOSConfigProfile::RestrictionsPayload < Hash
       'safariForceFraudWarning' => ['Force Safari fraud warning', true],
       'safariAllowJavascript' => ['Allow Safari to execute JavaScript', true],
       'safariAllowPopups' => ['Allow Safari to show pop-up tabs', true],
-      'allowScreenShot' => ['Allow screenshots (For < iOS 9)', true],
       'allowSharedStream' => ['Allow Shared Photo Stream', true],
       'allowUntrustedTLSPrompt' => ['Allow untrusted HTTPS certificates', true],
       'allowVoiceDialing' => ['Allow voice dialing', true],
@@ -47,7 +46,7 @@ class IOSConfigProfile::RestrictionsPayload < Hash
       'allowEnterpriseBookBackup' => ['Allow Enterprise books to be backed up', true],
       'allowEnterpriseBookMetadataSync' => ['Allow Enterprise book notes and highlights to be synchronized', true],
       'forceAirDropUnmanaged' => ['Consider AirDrop to be an unmanaged drop target (iOS 9+)', false],
-      'allowScreenShot' => ['Allow display screenshots and screen recording (iOS 9+)', true],
+      'allowScreenShot' => ['Allow display screenshots (also allow screen recording for iOS 9+)', true],
 
     }
   end
