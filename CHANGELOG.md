@@ -1,3 +1,9 @@
+## 1.2.1 (2015-10-21)
+
+Bugfixes
+
+ - Fix duplicate restriction keys
+
 ## 1.2.0 (2015-10-18)
 
 Features
