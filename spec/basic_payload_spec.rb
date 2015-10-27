@@ -40,14 +40,14 @@ describe IOSConfigProfile::BasicPayload do
   describe "#require_attributes" do
     it "will check for multiple attributes" do
       payload.send(:require_attributes, :to_plist, :uuid)
-      expect{payload.send(:require_attributes, :to_plist, :asdf)}.to raise_error
+      expect{payload.send(:require_attributes, :to_plist, :asdf)}.to raise_error NoMethodError
     end
   end
 
   describe "#require_attribute" do
     it "will raise an error if the name doesn't exist" do
       payload.send(:require_attribute, :to_plist)
-      expect{payload.send(:require_attribute, :asdf)}.to raise_error
+      expect{payload.send(:require_attribute, :asdf)}.to raise_error NoMethodError
     end
   end
 end

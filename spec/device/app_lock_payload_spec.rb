@@ -7,7 +7,7 @@ describe IOSConfigProfile::AppLockPayload do
     it "must be initialized with an app's bundle id" do
       payload = subject.new '1234'
       expect(payload['PayloadContent'][0]['App']['Identifier']).to eq '1234'
-      expect{subject.new nil}.to raise_error
+      expect{subject.new nil}.to raise_error RuntimeError
     end
     it "has required payload values" do
       payload = subject.new '1234'

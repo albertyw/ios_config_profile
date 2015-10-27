@@ -8,7 +8,7 @@ describe IOSConfigProfile::VPNPayload do
     it "must be initialized with a config" do
       payload = subject.new config
       expect(payload.vpn_config).to eq config
-      expect{subject.new nil}.to raise_error
+      expect{subject.new nil}.to raise_error RuntimeError
     end
     it "has a uuid" do
       payload1 = subject.new config
