@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe IOSConfigProfile::DeviceInformationPayload do
   let(:queries) do
@@ -18,7 +18,7 @@ describe IOSConfigProfile::DeviceInformationPayload do
   let(:device_information_payload_attributes) do
     {
       "Queries" => queries,
-      "RequestType" => "DeviceInformation"
+      "RequestType" => "DeviceInformation",
     }
   end
 

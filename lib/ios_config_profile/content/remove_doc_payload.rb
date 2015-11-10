@@ -14,9 +14,9 @@ module IOSConfigProfile
 
     def install_doc_payload
       {
-          'RequestType' => 'RemoveMedia',
-          'MediaType' => 'Book',
-          'PersistentID' => "com.cellabus.files.#{doc_url}"
+        "RequestType" => "RemoveMedia",
+        "MediaType" => "Book",
+        "PersistentID" => "com.cellabus.files.#{doc_url}",
       }
     end
   end

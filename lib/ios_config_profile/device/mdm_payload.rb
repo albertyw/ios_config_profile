@@ -5,8 +5,10 @@ module IOSConfigProfile
     attr_reader :url, :security_payload, :topic
 
     def initialize(url, security_payload, topic)
-      raise RuntimeError, "url must be https" if url[0,5] != 'https'
-      @url, @security_payload, @topic = url, security_payload, topic
+      raise "url must be https" if url[0, 5] != "https"
+      @url = url
+      @security_payload = security_payload
+      @topic = topic
       require_attributes :url, :topic, :security_payload
       replace mdm_payload
     end
@@ -15,23 +17,23 @@ module IOSConfigProfile
 
     def mdm_payload
       {
-        'Topic' => topic,
-        'ServerURL' => "#{url}/command",
-        'CheckInURL' => "#{url}/checkin",
-        'PayloadUUID' => uuid,
-        'IdentityCertificateUUID' => security_payload.uuid,
+        "Topic" => topic,
+        "ServerURL" => "#{url}/command",
+        "CheckInURL" => "#{url}/checkin",
+        "PayloadUUID" => uuid,
+        "IdentityCertificateUUID" => security_payload.uuid,
 
-        'SignMessage' => false,
-        'AccessRights' => 8191,
-        'UseDevelopmentAPNS' => false,
-        'CheckOutWhenRemoved' => true,
+        "SignMessage" => false,
+        "AccessRights" => 8191,
+        "UseDevelopmentAPNS" => false,
+        "CheckOutWhenRemoved" => true,
 
-        'PayloadType' => 'com.apple.mdm',
-        'PayloadVersion' => 1,
-        'PayloadIdentifier' => 'com.cellabusipcu.profile.mdm',
-        'PayloadDisplayName' => 'Mobile Device Management',
-        'PayloadDescription' => 'Configures Mobile Device Management',
-        'PayloadOrganization' => 'Cellabus, Inc.'
+        "PayloadType" => "com.apple.mdm",
+        "PayloadVersion" => 1,
+        "PayloadIdentifier" => "com.cellabusipcu.profile.mdm",
+        "PayloadDisplayName" => "Mobile Device Management",
+        "PayloadDescription" => "Configures Mobile Device Management",
+        "PayloadOrganization" => "Cellabus, Inc.",
       }
     end
   end

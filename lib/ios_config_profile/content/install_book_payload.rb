@@ -13,9 +13,9 @@ class IOSConfigProfile::InstallBookPayload < Hash
 
   def install_book_payload
     {
-        'RequestType' => 'InstallMedia',
-        'iTunesStoreID' => itunes_store_id,
-        'MediaType' => 'Book'
+      "RequestType" => "InstallMedia",
+      "iTunesStoreID" => itunes_store_id,
+      "MediaType" => "Book",
     }
   end
 end

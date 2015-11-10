@@ -13,8 +13,8 @@ class IOSConfigProfile::RemoveApplicationPayload < Hash
 
   def remove_application_payload
     {
-        'RequestType' => 'RemoveApplication',
-        'Identifier' => bundle_id
+      "RequestType" => "RemoveApplication",
+      "Identifier" => bundle_id,
     }
   end
 end

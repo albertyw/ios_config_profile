@@ -1,9 +1,9 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe IOSConfigProfile::InstalledApplicationListPayload do
   let(:installed_application_list_payload_attributes) do
     {
-        "RequestType" => "InstalledApplicationList"
+      "RequestType" => "InstalledApplicationList",
     }
   end
 

@@ -13,9 +13,9 @@ class IOSConfigProfile::RemoveBookPayload < Hash
 
   def remove_book_payload
     {
-        'RequestType' => 'RemoveMedia',
-        'MediaType' => 'Book',
-        'iTunesStoreID' => itunes_store_id,
+      "RequestType" => "RemoveMedia",
+      "MediaType" => "Book",
+      "iTunesStoreID" => itunes_store_id,
     }
   end
 end

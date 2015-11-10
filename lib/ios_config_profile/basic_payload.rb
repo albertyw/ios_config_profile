@@ -25,7 +25,7 @@ module IOSConfigProfile
     end
 
     def require_attribute(name)
-      send(name) or raise %{Required attribute "#{name}" is not present}
+      send(name) || raise(%{Required attribute "#{name}" is not present})
     end
   end
 end

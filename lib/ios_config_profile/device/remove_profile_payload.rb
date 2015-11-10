@@ -13,8 +13,8 @@ class IOSConfigProfile::RemoveProfilePayload < Hash
 
   def remove_profile_payload
     {
-      'RequestType' => 'RemoveProfile',
-      'Identifier' => device_profile_identifier
+      "RequestType" => "RemoveProfile",
+      "Identifier" => device_profile_identifier,
     }
   end
 end

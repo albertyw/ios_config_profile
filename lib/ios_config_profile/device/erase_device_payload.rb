@@ -9,7 +9,7 @@ class IOSConfigProfile::EraseDevicePayload < Hash
 
   def erase_device_payload
     {
-        'RequestType' => 'EraseDevice'
+      "RequestType" => "EraseDevice",
 
     }
   end
