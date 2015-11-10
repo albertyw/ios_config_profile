@@ -13,8 +13,8 @@ class IOSConfigProfile::SetDeviceNamePayload < Hash
 
   def set_device_name_payload
     {
-        'RequestType' => 'Settings',
-        'Settings' => [{ 'Item' => 'DeviceName', 'DeviceName' => new_device_name}]
+      "RequestType" => "Settings",
+      "Settings" => [{ "Item" => "DeviceName", "DeviceName" => new_device_name }],
     }
   end
 end

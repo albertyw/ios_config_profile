@@ -14,9 +14,9 @@ module IOSConfigProfile
 
     def install_market_app_payload
       {
-          'RequestType' => 'InstallApplication',
-          'ManifestURL' => manifest_url,
-          'ManagementFlags' => 1
+        "RequestType" => "InstallApplication",
+        "ManifestURL" => manifest_url,
+        "ManagementFlags" => 1,
       }
     end
   end

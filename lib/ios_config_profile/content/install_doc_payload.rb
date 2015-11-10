@@ -4,7 +4,8 @@ class IOSConfigProfile::InstallDocPayload < Hash
   attr_accessor :filepicker_url, :name
 
   def initialize(filepicker_url, name)
-    @filepicker_url, @name = filepicker_url, name
+    @filepicker_url = filepicker_url
+    @name = name
     require_attributes :filepicker_url, :name
     merge! install_doc_payload
   end
@@ -13,12 +14,12 @@ class IOSConfigProfile::InstallDocPayload < Hash
 
   def install_doc_payload
     {
-        'RequestType' => 'InstallMedia',
-        'MediaURL' => filepicker_url,
-        'MediaType' => 'Book',
-        'Kind' => 'pdf',
-        'Title' => name,
-        'PersistentID' => "com.cellabus.files.#{filepicker_url}"
+      "RequestType" => "InstallMedia",
+      "MediaURL" => filepicker_url,
+      "MediaType" => "Book",
+      "Kind" => "pdf",
+      "Title" => name,
+      "PersistentID" => "com.cellabus.files.#{filepicker_url}",
     }
   end
 end

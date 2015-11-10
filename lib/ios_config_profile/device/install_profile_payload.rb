@@ -13,8 +13,8 @@ class IOSConfigProfile::InstallProfilePayload < Hash
 
   def install_profile_payload
     {
-      'RequestType' => 'InstallProfile',
-      'Payload' => StringIO.new(profile)
+      "RequestType" => "InstallProfile",
+      "Payload" => StringIO.new(profile),
     }
   end
 end

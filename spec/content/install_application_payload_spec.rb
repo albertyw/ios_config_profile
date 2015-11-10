@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe IOSConfigProfile::InstallApplicationPayload do
   let(:install_application_payload_attributes) do

@@ -15,17 +15,17 @@ module IOSConfigProfile
 
     def security_payload
       {
-        'Password' => password,
-        'PayloadUUID' => uuid,
-        'PayloadContent' => StringIO.new(content),
-        'PayloadCertificateFileName' => 'identity.p12',
+        "Password" => password,
+        "PayloadUUID" => uuid,
+        "PayloadContent" => StringIO.new(content),
+        "PayloadCertificateFileName" => "identity.p12",
 
-        'PayloadType' => 'com.apple.security.pkcs12',
-        'PayloadVersion' => 1,
-        'PayloadIdentifier' => 'com.cellabusipcu.profile.credential',
-        'PayloadDisplayName' => 'Security',
-        'PayloadDescription' => 'Provides device authentication (certificate or identity).',
-        'PayloadOrganization' => 'Cellabus, Inc.'
+        "PayloadType" => "com.apple.security.pkcs12",
+        "PayloadVersion" => 1,
+        "PayloadIdentifier" => "com.cellabusipcu.profile.credential",
+        "PayloadDisplayName" => "Security",
+        "PayloadDescription" => "Provides device authentication (certificate or identity).",
+        "PayloadOrganization" => "Cellabus, Inc.",
       }
     end
   end

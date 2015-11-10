@@ -15,37 +15,37 @@ module IOSConfigProfile
 
     def vpn_payload
       {
-        'PayloadContent' => [{
-          'PayloadType' => 'com.apple.vpn.managed',
-          'PayloadIdentifier' => 'com.cellabus.vpn',
-          'PayloadDescription' => 'Set up VPN networking access',
-          'PayloadUUID' => uuid,
-          'PayloadVersion' => 1,
-          'UserDefinedName' => 'VPN',
-          'OverridePrimary' => vpn_config[:override_primary],
-          'VPNType' => vpn_config[:vpn_type],
-          'OnDemandEnabled' => 0,
-          'OnDemandRules' => [],
-          'VendorConfig' => get_vendor_config,
+        "PayloadContent" => [{
+          "PayloadType" => "com.apple.vpn.managed",
+          "PayloadIdentifier" => "com.cellabus.vpn",
+          "PayloadDescription" => "Set up VPN networking access",
+          "PayloadUUID" => uuid,
+          "PayloadVersion" => 1,
+          "UserDefinedName" => "VPN",
+          "OverridePrimary" => vpn_config[:override_primary],
+          "VPNType" => vpn_config[:vpn_type],
+          "OnDemandEnabled" => 0,
+          "OnDemandRules" => [],
+          "VendorConfig" => get_vendor_config,
         }],
-        'PayloadType' => 'Configuration',
-        'PayloadDisplayName' => 'Cellabus VPN Configuration',
-        'PayloadIdentifier' => 'com.cellabus.vpn',
-        'PayloadUUID' => uuid,
-        'PayloadVersion' => 1,
+        "PayloadType" => "Configuration",
+        "PayloadDisplayName" => "Cellabus VPN Configuration",
+        "PayloadIdentifier" => "com.cellabus.vpn",
+        "PayloadUUID" => uuid,
+        "PayloadVersion" => 1,
       }
     end
 
     def get_vendor_config
-      if vpn_config[:vpn_type] == 'L2TP'
+      if vpn_config[:vpn_type] == "L2TP"
         get_l2tp_config
-      elsif vpn_config[:vpn_type] == 'PPTP'
+      elsif vpn_config[:vpn_type] == "PPTP"
         raise NotImplementedError
-      elsif vpn_config[:vpn_type] == 'IPSec'
+      elsif vpn_config[:vpn_type] == "IPSec"
         get_ipsec_config
-      elsif vpn_config[:vpn_type] == 'IKEv2'
+      elsif vpn_config[:vpn_type] == "IKEv2"
         raise NotImplementedError
-      elsif vpn_config[:vpn_type] == 'AlwaysOn'
+      elsif vpn_config[:vpn_type] == "AlwaysOn"
         raise NotImplementedError
       else
         raise NotImplementedError
@@ -54,33 +54,31 @@ module IOSConfigProfile
 
     def get_l2tp_config
       {
-        'AuthName' => vpn_config[:auth_name],
-        'AuthPassword' => vpn_config[:auth_password],
-        'TokenCard' => false,
-        'CommRemoteAccess' => vpn_config[:comm_remote_access],
-        'AuthEAPPlugins' => [],
-        'AuthProtocol' => [],
-        'CCPMPPE40Enabled' => false,
-        'CCPMPPE128Enabled' => false,
-        'CCPEnabled' => false,
+        "AuthName" => vpn_config[:auth_name],
+        "AuthPassword" => vpn_config[:auth_password],
+        "TokenCard" => false,
+        "CommRemoteAccess" => vpn_config[:comm_remote_access],
+        "AuthEAPPlugins" => [],
+        "AuthProtocol" => [],
+        "CCPMPPE40Enabled" => false,
+        "CCPMPPE128Enabled" => false,
+        "CCPEnabled" => false,
       }
     end
 
     def get_ipsec_config
       config = {
-        'RemoteAddress' => vpn_config[:remote_address],
-        'AuthenticationMethod' => vpn_config[:authentication_method],
-        'XAuthName' => vpn_config[:x_auth_name],
-        'XAuthEnabled' => vpn_config[:x_auth_enabled],
-        'SharedSecret' => vpn_config[:shared_secret],
-        'PayloadCertificateUUID' => vpn_config[:payload_certificate_uuid],
-        'PromptForVPNPIN' => vpn_config[:prompt_for_vpn_pin],
+        "RemoteAddress" => vpn_config[:remote_address],
+        "AuthenticationMethod" => vpn_config[:authentication_method],
+        "XAuthName" => vpn_config[:x_auth_name],
+        "XAuthEnabled" => vpn_config[:x_auth_enabled],
+        "SharedSecret" => vpn_config[:shared_secret],
+        "PayloadCertificateUUID" => vpn_config[:payload_certificate_uuid],
+        "PromptForVPNPIN" => vpn_config[:prompt_for_vpn_pin],
       }
-      if vpn_config[:authentication_method] == 'SharedSecret'
-        config.merge!({
-          'LocalIdentifier' => vpn_config[:local_identifier],
-          'LocalIdentifierType' => vpn_config[:local_identifier_type],
-        })
+      if vpn_config[:authentication_method] == "SharedSecret"
+        config.merge!("LocalIdentifier" => vpn_config[:local_identifier],
+                      "LocalIdentifierType" => vpn_config[:local_identifier_type])
       end
       config
     end

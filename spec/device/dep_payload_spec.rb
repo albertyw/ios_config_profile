@@ -1,7 +1,7 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe IOSConfigProfile::DEPPayload do
-  subject { IOSConfigProfile::DEPPayload.new "https://example.com", 'topic', 'identity', 'password' }
+  subject { IOSConfigProfile::DEPPayload.new "https://example.com", "topic", "identity", "password" }
 
   let(:mdm_payload) { double IOSConfigProfile::MDMPayload }
   let(:security_payload) { double IOSConfigProfile::SecurityPayload }
@@ -12,7 +12,7 @@ describe IOSConfigProfile::DEPPayload do
   end
 
   it "has two payloads" do
-    expect(subject['PayloadContent']).to eq([mdm_payload, security_payload])
-    expect(subject['PayloadType']).to eq 'Configuration'
+    expect(subject["PayloadContent"]).to eq([mdm_payload, security_payload])
+    expect(subject["PayloadType"]).to eq "Configuration"
   end
 end

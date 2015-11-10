@@ -9,8 +9,8 @@ class IOSConfigProfile::DeviceInformationPayload < Hash
 
   def device_information_request_payload
     {
-      'RequestType' => 'DeviceInformation',
-      'Queries' => queries
+      "RequestType" => "DeviceInformation",
+      "Queries" => queries,
     }
   end
 

@@ -1,4 +1,4 @@
-require 'ios_config_profile'
+require "ios_config_profile"
 
 module IOSConfigProfile
   class CommandPayload < Hash
@@ -16,8 +16,8 @@ module IOSConfigProfile
 
     def command_payload
       {
-        'Command' => command,
-        'CommandUUID' => uuid
+        "Command" => command,
+        "CommandUUID" => uuid,
       }
     end
   end

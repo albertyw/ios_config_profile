@@ -17,15 +17,15 @@ module IOSConfigProfile
 
     def dep_payload
       {
-        'PayloadContent' => [mdm_payload, security_payload],
-        'PayloadDescription' => 'Cellabus MDM Enrollment Profile',
-        'PayloadDisplayName' => 'Cellabus MDM Enrollment Profile',
-        'PayloadIdentifier' => 'com.cellabus.mdm.enrollment.profile',
-        'PayloadOrganization' => 'Cellabus, Inc.',
-        'PayloadRemovalDisallowed' => false,
-        'PayloadType' => 'Configuration',
-        'PayloadUUID' => uuid,
-        'PayloadVersion' => 1,
+        "PayloadContent" => [mdm_payload, security_payload],
+        "PayloadDescription" => "Cellabus MDM Enrollment Profile",
+        "PayloadDisplayName" => "Cellabus MDM Enrollment Profile",
+        "PayloadIdentifier" => "com.cellabus.mdm.enrollment.profile",
+        "PayloadOrganization" => "Cellabus, Inc.",
+        "PayloadRemovalDisallowed" => false,
+        "PayloadType" => "Configuration",
+        "PayloadUUID" => uuid,
+        "PayloadVersion" => 1,
       }
     end
 

@@ -13,9 +13,9 @@ class IOSConfigProfile::InstallApplicationPayload < Hash
 
   def install_application_payload
     {
-      'RequestType' => 'InstallApplication',
-      'iTunesStoreID' => itunes_store_id,
-    'ManagementFlags' => 1
+      "RequestType" => "InstallApplication",
+      "iTunesStoreID" => itunes_store_id,
+      "ManagementFlags" => 1,
     }
   end
 end

@@ -1,4 +1,4 @@
-require 'stringio'
+require "stringio"
 
 class IOSConfigProfile::ClearPasscodePayload < Hash
   include IOSConfigProfile::BasicPayload
@@ -15,8 +15,8 @@ class IOSConfigProfile::ClearPasscodePayload < Hash
 
   def clear_passcode_payload
     {
-        'RequestType' => 'ClearPasscode',
-        'UnlockToken' => StringIO.new(unlock_token)
+      "RequestType" => "ClearPasscode",
+      "UnlockToken" => StringIO.new(unlock_token),
     }
   end
 end

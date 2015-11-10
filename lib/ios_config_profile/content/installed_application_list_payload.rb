@@ -10,7 +10,7 @@ module IOSConfigProfile
 
     def installed_application_list_request_payload
       {
-          'RequestType' => 'InstalledApplicationList'
+        "RequestType" => "InstalledApplicationList",
       }
     end
   end

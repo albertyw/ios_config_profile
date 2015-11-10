@@ -9,7 +9,7 @@ class IOSConfigProfile::LockDevicePayload < Hash
 
   def lock_device_payload
     {
-        'RequestType' => 'DeviceLock',
+      "RequestType" => "DeviceLock",
     }
   end
 end
