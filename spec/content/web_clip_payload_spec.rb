@@ -1,21 +1,6 @@
 require "spec_helper"
 
 describe IOSConfigProfile::WebClipPayload do
-  let(:security_payload_attributes) do
-    {
-      "Password" => "password",
-      "PayloadUUID" => "00000000-0000-0000-0000-000000000000",
-      "PayloadCertificateFileName" => "identity.p12",
-
-      "PayloadType" => "com.apple.security.pkcs12",
-      "PayloadVersion" => 1,
-      "PayloadIdentifier" => "com.cellabusipcu.profile.credential",
-      "PayloadDisplayName" => "Security",
-      "PayloadDescription" => "Provides device authentication (certificate or identity).",
-      "PayloadOrganization" => "",
-    }
-  end
-
   subject { IOSConfigProfile::WebClipPayload.new "asdf.com", "ASDF", "PNGasdf" }
 
   it "contains valid Configuration entries" do
