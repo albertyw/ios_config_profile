@@ -332,13 +332,16 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
   Enabled: true
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
   Description: 'Checks for trailing comma in parameter lists and literals.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
   EnforcedStyleForMultiline: comma
   SupportedStyles:
     - comma
     - no_comma
+  Enabled: true
+
+Style/TrailingCommaInArguments:
   Enabled: true
 
 Style/TrivialAccessors:
