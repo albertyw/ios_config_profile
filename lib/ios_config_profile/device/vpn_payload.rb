@@ -77,8 +77,8 @@ module IOSConfigProfile
         "PromptForVPNPIN" => vpn_config[:prompt_for_vpn_pin],
       }
       if vpn_config[:authentication_method] == "SharedSecret"
-        config.merge!("LocalIdentifier" => vpn_config[:local_identifier],
-                      "LocalIdentifierType" => vpn_config[:local_identifier_type])
+        config["LocalIdentifier"] = vpn_config[:local_identifier]
+        config["LocalIdentifierType"] = vpn_config[:local_identifier_type]
       end
       config
     end
