@@ -1,16 +1,18 @@
-class IOSConfigProfile::EraseDevicePayload < Hash
-  include IOSConfigProfile::BasicPayload
+module IOSConfigProfile
+  class EraseDevicePayload < Hash
+    include IOSConfigProfile::BasicPayload
 
-  def initialize
-    merge! erase_device_payload
-  end
+    def initialize
+      merge! erase_device_payload
+    end
 
-  private
+    private
 
-  def erase_device_payload
-    {
-      "RequestType" => "EraseDevice",
+    def erase_device_payload
+      {
+        "RequestType" => "EraseDevice",
 
-    }
+      }
+    end
   end
 end

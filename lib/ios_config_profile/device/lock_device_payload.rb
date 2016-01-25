@@ -1,15 +1,17 @@
-class IOSConfigProfile::LockDevicePayload < Hash
-  include IOSConfigProfile::BasicPayload
+module IOSConfigProfile
+  class LockDevicePayload < Hash
+    include IOSConfigProfile::BasicPayload
 
-  def initialize
-    merge! lock_device_payload
-  end
+    def initialize
+      merge! lock_device_payload
+    end
 
-  private
+    private
 
-  def lock_device_payload
-    {
-      "RequestType" => "DeviceLock",
-    }
+    def lock_device_payload
+      {
+        "RequestType" => "DeviceLock",
+      }
+    end
   end
 end
