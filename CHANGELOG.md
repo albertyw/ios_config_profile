@@ -1,3 +1,11 @@
+## 1.3.0 (2016-01-24)
+
+Features
+
+ - Open sourced under GPL
+ - Various housekeeping
+ - Gem updates
+
 ## 1.2.1 (2015-10-21)
 
 Bugfixes
