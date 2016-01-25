@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Generate Apple iOS configuration profiles and payloads"
   spec.summary       = "This gem provides an easy way to generate configuration profiles for use with Apple iOS devices. These profiles and payloads can be delivered via Apple MDM, Apple's Configurator, or the iPhone Configuration Utility (IPCU)."
   spec.homepage      = "https://github.com/cellabus/ios_config_profile"
+  spec.license       = "AGPL-3.0"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
@@ -20,8 +21,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "CFPropertyList", "~> 2.2"
   spec.add_dependency "plist", "~> 3.1"
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", "~> 10.4"
   spec.add_development_dependency "rspec", "~> 3.4"
-  spec.add_development_dependency "rspec-its", "~> 1.2.0"
-  spec.add_development_dependency "codeclimate-test-reporter"
+  spec.add_development_dependency "rspec-its", "~> 1.2"
+  spec.add_development_dependency "codeclimate-test-reporter", "~> 0.4"
 end
