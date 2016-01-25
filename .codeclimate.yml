@@ -1,0 +1,9 @@
+---
+engines:
+  fixme:
+    enabled: true
+  rubocop:
+    enabled: true
+ratings:
+  paths:
+  - "**.rb"
