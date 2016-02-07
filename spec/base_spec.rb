@@ -16,4 +16,20 @@ describe IOSConfigProfile do
       expect(IOSConfigProfile.root_domain).to eq example
     end
   end
+
+  context '@@organization' do
+    after :all do
+      IOSConfigProfile.organization = 'Cellabus, Inc.'
+    end
+
+    it 'has an organization' do
+      expect(IOSConfigProfile.organization).to eq 'Cellabus, Inc.'
+    end
+
+    it 'can set an organization' do
+      example = 'example'
+      IOSConfigProfile.organization = example
+      expect(IOSConfigProfile.organization).to eq example
+    end
+  end
 end
