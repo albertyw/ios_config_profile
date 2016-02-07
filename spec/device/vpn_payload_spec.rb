@@ -35,6 +35,10 @@ describe IOSConfigProfile::VPNPayload do
     subject { IOSConfigProfile::VPNPayload.new config }
     it "raises errors for unimplemented vpn types" do
       subject.send :get_vendor_config
+      subject.vpn_config[:vpn_type] = "PPTP"
+      expect { subject.send :get_vendor_config }.to raise_error NotImplementedError
+      subject.vpn_config[:vpn_type] = "IKEv2"
+      expect { subject.send :get_vendor_config }.to raise_error NotImplementedError
       subject.vpn_config[:vpn_type] = "AlwaysOn"
       expect { subject.send :get_vendor_config }.to raise_error NotImplementedError
       subject.vpn_config[:vpn_type] = "asdf"
