@@ -46,7 +46,7 @@ describe IOSConfigProfile::VPNPayload do
     end
     it "calls appropriate function" do
       expect(subject).to receive(:get_l2tp_config).and_return "asdf"
-      expect(subject.send :get_vendor_config).to eq "asdf"
+      expect(subject.send(:get_vendor_config)).to eq "asdf"
     end
   end
 
@@ -67,7 +67,7 @@ describe IOSConfigProfile::VPNPayload do
     it "returns the IPSec configuration" do
       config = subject.send :get_ipsec_config
       expect(config["RemoteAddress"]).to eq "asdf.com"
-      expect(config.include? "LocalIdentifier").to be_falsey
+      expect(config.include?("LocalIdentifier")).to be_falsey
     end
     it "adds in local identifier if using shared secret" do
       subject.vpn_config[:authentication_method] = "SharedSecret"

@@ -20,7 +20,7 @@ describe IOSConfigProfile::EncryptedPayload do
       expect(subject).to receive(:encrypt).with("cert").and_return(mock)
       expect(mock).to receive(:certificate).and_return("asdf")
       expect(subject).to receive(:configuration).and_return("encrypted_cert")
-      expect(subject.encrypted_configuration "cert").to eq "encrypted_cert"
+      expect(subject.encrypted_configuration("cert")).to eq "encrypted_cert"
     end
   end
 end
