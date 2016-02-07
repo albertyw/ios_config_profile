@@ -28,7 +28,7 @@ module IOSConfigProfile
           "PayloadVersion" => 1,
         }],
         "PayloadType" => "Configuration",
-        "PayloadDisplayName" => "Cellabus Web Clip",
+        "PayloadDisplayName" => "#{IOSConfigProfile.organization} Web Clip",
         "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.config.mdm.#{SecureRandom.urlsafe_base64}",
         "PayloadUUID" => uuid,
         "PayloadVersion" => 1,

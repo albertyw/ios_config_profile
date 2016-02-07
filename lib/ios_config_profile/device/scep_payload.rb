@@ -15,7 +15,7 @@ module IOSConfigProfile
     def security_payload
       {
         "URL" => url,
-        # 'Name' => 'Cellabus SCEP Payload',
+        # 'Name' => '#{IOSConfigProfile.organization} SCEP Payload',
         # 'Subject' => '',
         # 'Challenge' => '',
         # 'Keysize' => 1024,

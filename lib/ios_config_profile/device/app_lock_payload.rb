@@ -23,7 +23,7 @@ module IOSConfigProfile
           "PayloadVersion" => 1,
         }],
         "PayloadType" => "Configuration",
-        "PayloadDisplayName" => "Cellabus App Lock",
+        "PayloadDisplayName" => "#{IOSConfigProfile.organization} App Lock",
         "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}applock.profile.mdm",
         "PayloadUUID" => uuid,
         "PayloadVersion" => 1,

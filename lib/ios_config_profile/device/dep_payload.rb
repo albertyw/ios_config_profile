@@ -18,8 +18,8 @@ module IOSConfigProfile
     def dep_payload
       {
         "PayloadContent" => [mdm_payload, security_payload],
-        "PayloadDescription" => "Cellabus MDM Enrollment Profile",
-        "PayloadDisplayName" => "Cellabus MDM Enrollment Profile",
+        "PayloadDescription" => "#{IOSConfigProfile.organization} MDM Enrollment Profile",
+        "PayloadDisplayName" => "#{IOSConfigProfile.organization} MDM Enrollment Profile",
         "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.mdm.enrollment.profile",
         "PayloadOrganization" => IOSConfigProfile.organization,
         "PayloadRemovalDisallowed" => false,

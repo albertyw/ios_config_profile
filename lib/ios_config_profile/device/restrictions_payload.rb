@@ -134,7 +134,7 @@ module IOSConfigProfile
       {
         "PayloadContent" => [content],
         "PayloadType" => "Configuration",
-        "PayloadDisplayName" => "Cellabus Device Restrictions",
+        "PayloadDisplayName" => "#{IOSConfigProfile.organization} Device Restrictions",
         "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.config.mdm.#{SecureRandom.urlsafe_base64}",
         "PayloadUUID" => uuid,
         "PayloadVersion" => 1,

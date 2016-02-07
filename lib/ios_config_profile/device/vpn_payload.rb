@@ -29,7 +29,7 @@ module IOSConfigProfile
           "VendorConfig" => get_vendor_config,
         }],
         "PayloadType" => "Configuration",
-        "PayloadDisplayName" => "Cellabus VPN Configuration",
+        "PayloadDisplayName" => "#{IOSConfigProfile.organization} VPN Configuration",
         "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.vpn",
         "PayloadUUID" => uuid,
         "PayloadVersion" => 1,
