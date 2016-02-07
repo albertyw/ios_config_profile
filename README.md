@@ -10,8 +10,31 @@
 Gem for creating and manipulating Apple Configuration Profiles and Mobile
 Device Management (MDM) Protocols
 
-# Usage
-TODO
+## Installation
 
-# Development
+Add this to your Gemfile
+
+```ruby
+gem 'ios-cert-enrollment', git: 'https://github.com/cellabus/ios-cert-enrollment'
+gem 'ios_config_profile'
+```
+
+This gem requires IOSCertEnrollment.  The [rubygems version](https://rubygems.org/gems/ios-cert-enrollment) works
+but it is highly recommended to use an [updated version](https://github.com/cellabus/ios-cert-enrollment).
+
+## Usage
+
+Apple Configuration Profiles are Property List (plist) files a type of XML file.
+The plist gem converts hashes into plist files.
+
+For a given configuration profile, you can initialize the class and export it
+into a plist string.  For example:
+
+```ruby
+payload = IOSConfigProfile::InstallBookPayload.new '12345'
+payload = payload.to_command_payload
+```
+
+## Development
+
 To run tests - `bundle exec rspec`
