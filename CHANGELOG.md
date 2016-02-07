@@ -1,3 +1,11 @@
+## 1.4.0 (2016-02-07)
+
+Features
+
+ - Add installation and usage information to README
+ - Remove hardcoded references to Cellabus
+ - Bring test coverage to 100%
+
 ## 1.3.0 (2016-01-24)
 
 Features
