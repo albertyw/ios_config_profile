@@ -17,7 +17,7 @@ module IOSConfigProfile
       {
         "PayloadContent" => [{
           "PayloadType" => "com.apple.vpn.managed",
-          "PayloadIdentifier" => "com.cellabus.vpn",
+          "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.vpn",
           "PayloadDescription" => "Set up VPN networking access",
           "PayloadUUID" => uuid,
           "PayloadVersion" => 1,
@@ -29,8 +29,8 @@ module IOSConfigProfile
           "VendorConfig" => get_vendor_config,
         }],
         "PayloadType" => "Configuration",
-        "PayloadDisplayName" => "Cellabus VPN Configuration",
-        "PayloadIdentifier" => "com.cellabus.vpn",
+        "PayloadDisplayName" => "#{IOSConfigProfile.organization} VPN Configuration",
+        "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.vpn",
         "PayloadUUID" => uuid,
         "PayloadVersion" => 1,
       }

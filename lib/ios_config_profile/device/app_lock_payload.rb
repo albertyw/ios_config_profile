@@ -17,14 +17,14 @@ module IOSConfigProfile
         "PayloadContent" => [{
           "App" => { "Identifier" => app_bundle_id },
           "PayloadType" => "com.apple.app.lock",
-          "PayloadIdentifier" => "com.cellabusapplock.profile.mdm",
+          "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}applock.profile.mdm",
           "PayloadDescription" => "Lock device to an app",
           "PayloadUUID" => uuid,
           "PayloadVersion" => 1,
         }],
         "PayloadType" => "Configuration",
-        "PayloadDisplayName" => "Cellabus App Lock",
-        "PayloadIdentifier" => "com.cellabusapplock.profile.mdm",
+        "PayloadDisplayName" => "#{IOSConfigProfile.organization} App Lock",
+        "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}applock.profile.mdm",
         "PayloadUUID" => uuid,
         "PayloadVersion" => 1,
       }

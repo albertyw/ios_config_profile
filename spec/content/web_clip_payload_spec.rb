@@ -5,7 +5,7 @@ describe IOSConfigProfile::WebClipPayload do
 
   it "contains valid Configuration entries" do
     expect(subject["PayloadType"]).to eq "Configuration"
-    expect(subject["PayloadDisplayName"]).to eq "Cellabus Web Clip"
+    expect(subject["PayloadDisplayName"]).to eq "#{IOSConfigProfile.organization} Web Clip"
   end
 
   it "contains valid PayloadContent" do

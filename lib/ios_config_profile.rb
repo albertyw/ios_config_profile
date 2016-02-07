@@ -1,5 +1,6 @@
 require "ios-cert-enrollment"
 require "ios_config_profile/version"
+require "ios_config_profile/base"
 require "ios_config_profile/basic_payload"
 require "ios_config_profile/command_payload"
 require "ios_config_profile/encrypted_payload"

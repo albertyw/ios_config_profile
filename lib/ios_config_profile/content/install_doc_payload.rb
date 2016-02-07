@@ -20,7 +20,7 @@ module IOSConfigProfile
         "MediaType" => "Book",
         "Kind" => "pdf",
         "Title" => name,
-        "PersistentID" => "com.cellabus.files.#{filepicker_url}",
+        "PersistentID" => "#{IOSConfigProfile.root_domain}.files.#{filepicker_url}",
       }
     end
   end

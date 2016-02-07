@@ -16,7 +16,7 @@ module IOSConfigProfile
       {
         "RequestType" => "RemoveMedia",
         "MediaType" => "Book",
-        "PersistentID" => "com.cellabus.files.#{doc_url}",
+        "PersistentID" => "#{IOSConfigProfile.root_domain}.files.#{doc_url}",
       }
     end
   end
