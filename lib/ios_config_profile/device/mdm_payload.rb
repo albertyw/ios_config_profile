@@ -33,7 +33,7 @@ module IOSConfigProfile
         "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}ipcu.profile.mdm",
         "PayloadDisplayName" => "Mobile Device Management",
         "PayloadDescription" => "Configures Mobile Device Management",
-        "PayloadOrganization" => "Cellabus, Inc.",
+        "PayloadOrganization" => IOSConfigProfile.organization,
       }
     end
   end

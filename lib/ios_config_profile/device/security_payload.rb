@@ -25,7 +25,7 @@ module IOSConfigProfile
         "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}ipcu.profile.credential",
         "PayloadDisplayName" => "Security",
         "PayloadDescription" => "Provides device authentication (certificate or identity).",
-        "PayloadOrganization" => "Cellabus, Inc.",
+        "PayloadOrganization" => IOSConfigProfile.organization,
       }
     end
   end
