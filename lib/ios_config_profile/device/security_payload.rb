@@ -22,7 +22,7 @@ module IOSConfigProfile
 
         "PayloadType" => "com.apple.security.pkcs12",
         "PayloadVersion" => 1,
-        "PayloadIdentifier" => "com.cellabusipcu.profile.credential",
+        "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}ipcu.profile.credential",
         "PayloadDisplayName" => "Security",
         "PayloadDescription" => "Provides device authentication (certificate or identity).",
         "PayloadOrganization" => "Cellabus, Inc.",

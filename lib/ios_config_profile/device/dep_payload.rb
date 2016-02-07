@@ -20,7 +20,7 @@ module IOSConfigProfile
         "PayloadContent" => [mdm_payload, security_payload],
         "PayloadDescription" => "Cellabus MDM Enrollment Profile",
         "PayloadDisplayName" => "Cellabus MDM Enrollment Profile",
-        "PayloadIdentifier" => "com.cellabus.mdm.enrollment.profile",
+        "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.mdm.enrollment.profile",
         "PayloadOrganization" => "Cellabus, Inc.",
         "PayloadRemovalDisallowed" => false,
         "PayloadType" => "Configuration",

@@ -11,7 +11,7 @@ describe IOSConfigProfile::AppLockPayload do
     end
     it "has required payload values" do
       payload = subject.new "1234"
-      expect(payload["PayloadIdentifier"]).to eq "com.cellabusapplock.profile.mdm"
+      expect(payload["PayloadIdentifier"]).to eq "#{IOSConfigProfile.root_domain}applock.profile.mdm"
       expect(payload["PayloadContent"][0]["PayloadType"]).to eq "com.apple.app.lock"
     end
     it "has a uuid" do

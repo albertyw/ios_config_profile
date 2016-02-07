@@ -16,7 +16,7 @@ describe IOSConfigProfile::MDMPayload do
 
       "PayloadType" => "com.apple.mdm",
       "PayloadVersion" => 1,
-      "PayloadIdentifier" => "com.cellabusipcu.profile.mdm",
+      "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}ipcu.profile.mdm",
       "PayloadDisplayName" => "Mobile Device Management",
       "PayloadDescription" => "Configures Mobile Device Management",
       "PayloadOrganization" => "Cellabus, Inc.",

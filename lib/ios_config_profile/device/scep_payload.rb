@@ -24,7 +24,7 @@ module IOSConfigProfile
 
         "PayloadType" => "com.apple.security.scep",
         "PayloadVersion" => 1,
-        "PayloadIdentifier" => "com.cellabus.profile.scep",
+        "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.profile.scep",
         "PayloadDisplayName" => "Security",
         "PayloadDescription" => "Provides device authentication (certificate or identity).",
         "PayloadOrganization" => "",

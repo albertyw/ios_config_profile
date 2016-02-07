@@ -125,7 +125,7 @@ module IOSConfigProfile
     def add_boilerplate(payload)
       content = {
         "PayloadType" => "com.apple.applicationaccess",
-        "PayloadIdentifier" => "com.cellabus.restrictions",
+        "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.restrictions",
         "PayloadDescription" => "Restrict device capabilities",
         "PayloadUUID" => uuid,
         "PayloadRemovalDisallowed" => true,
@@ -135,7 +135,7 @@ module IOSConfigProfile
         "PayloadContent" => [content],
         "PayloadType" => "Configuration",
         "PayloadDisplayName" => "Cellabus Device Restrictions",
-        "PayloadIdentifier" => "com.cellabus.config.mdm.#{SecureRandom.urlsafe_base64}",
+        "PayloadIdentifier" => "#{IOSConfigProfile.root_domain}.config.mdm.#{SecureRandom.urlsafe_base64}",
         "PayloadUUID" => uuid,
         "PayloadVersion" => 1,
       }
