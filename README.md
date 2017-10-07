@@ -1,7 +1,7 @@
 # IOSConfigProfile
 
 [![Gem Version](https://badge.fury.io/rb/ios_config_profile.svg)](https://badge.fury.io/rb/ios_config_profile)
-[ ![Codeship Status for cellabus/ios_config_profile](https://codeship.com/projects/78639f70-c12a-0132-6290-3eb2295b72b3/status?branch=master)](https://codeship.com/projects/73471)
+[ ![Codeship Status for albertyw/ios_config_profile](https://app.codeship.com/projects/a5ec4690-8de5-0135-0e5e-0237abf0d3c1/status?branch=master)](https://app.codeship.com/projects/249725)
 [![Dependency Status](https://gemnasium.com/cellabus/ios_config_profile.svg)](https://gemnasium.com/cellabus/ios_config_profile)
 [![Code Climate](https://codeclimate.com/github/cellabus/ios_config_profile/badges/gpa.svg)](https://codeclimate.com/github/cellabus/ios_config_profile)
 [![Test Coverage](https://codeclimate.com/github/cellabus/ios_config_profile/badges/coverage.svg)](https://codeclimate.com/github/cellabus/ios_config_profile/coverage)
