@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "ios_config_profile"
   spec.version       = IOSConfigProfile::VERSION
   spec.authors       = ["Albert Wang"]
-  spec.email         = ["albert@cellabus.com"]
+  spec.email         = ["git@albertyw.com"]
   spec.description   = "Generate Apple iOS configuration profiles and payloads"
   spec.summary       = "This gem provides an easy way to generate configuration profiles for use with Apple iOS devices. These profiles and payloads can be delivered via Apple MDM, Apple's Configurator, or the iPhone Configuration Utility (IPCU)."
-  spec.homepage      = "https://github.com/cellabus/ios_config_profile"
+  spec.homepage      = "https://github.com/albertyw/ios_config_profile"
   spec.license       = "AGPL-3.0"
 
   spec.files         = `git ls-files`.split($/)
