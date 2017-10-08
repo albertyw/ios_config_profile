@@ -2,10 +2,10 @@
 
 [![Gem Version](https://badge.fury.io/rb/ios_config_profile.svg)](https://badge.fury.io/rb/ios_config_profile)
 [ ![Codeship Status for albertyw/ios_config_profile](https://app.codeship.com/projects/a5ec4690-8de5-0135-0e5e-0237abf0d3c1/status?branch=master)](https://app.codeship.com/projects/249725)
-[![Dependency Status](https://gemnasium.com/cellabus/ios_config_profile.svg)](https://gemnasium.com/cellabus/ios_config_profile)
-[![Code Climate](https://codeclimate.com/github/cellabus/ios_config_profile/badges/gpa.svg)](https://codeclimate.com/github/cellabus/ios_config_profile)
-[![Test Coverage](https://codeclimate.com/github/cellabus/ios_config_profile/badges/coverage.svg)](https://codeclimate.com/github/cellabus/ios_config_profile/coverage)
-[![security](https://hakiri.io/github/cellabus/ios_config_profile/master.svg)](https://hakiri.io/github/cellabus/ios_config_profile/master)
+[![Dependency Status](https://gemnasium.com/albertyw/ios_config_profile.svg)](https://gemnasium.com/albertyw/ios_config_profile)
+[![Code Climate](https://codeclimate.com/github/albertyw/ios_config_profile/badges/gpa.svg)](https://codeclimate.com/github/albertyw/ios_config_profile)
+[![Test Coverage](https://codeclimate.com/github/albertyw/ios_config_profile/badges/coverage.svg)](https://codeclimate.com/github/albertyw/ios_config_profile/coverage)
+[![security](https://hakiri.io/github/albertyw/ios_config_profile/master.svg)](https://hakiri.io/github/albertyw/ios_config_profile/master)
 
 Gem for creating and manipulating Apple Configuration Profiles and Mobile
 Device Management (MDM) Protocols
@@ -15,12 +15,12 @@ Device Management (MDM) Protocols
 Add this to your Gemfile
 
 ```ruby
-gem 'ios-cert-enrollment', git: 'https://github.com/cellabus/ios-cert-enrollment'
+gem 'ios-cert-enrollment', git: 'https://github.com/albertyw/ios-cert-enrollment'
 gem 'ios_config_profile'
 ```
 
 This gem requires IOSCertEnrollment.  The [rubygems version](https://rubygems.org/gems/ios-cert-enrollment) works
-but it is highly recommended to use an [updated version](https://github.com/cellabus/ios-cert-enrollment).
+but it is highly recommended to use an [updated version](https://github.com/albertyw/ios-cert-enrollment).
 
 ## Usage
 
