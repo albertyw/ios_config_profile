@@ -1,6 +1,3 @@
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
-
 require "ios_config_profile"
 require "rspec/its"
 
