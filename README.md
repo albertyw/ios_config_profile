@@ -1,7 +1,7 @@
 # IOSConfigProfile
 
 [![Gem Version](https://badge.fury.io/rb/ios_config_profile.svg)](https://badge.fury.io/rb/ios_config_profile)
-[ ![Codeship Status for albertyw/ios_config_profile](https://app.codeship.com/projects/a5ec4690-8de5-0135-0e5e-0237abf0d3c1/status?branch=master)](https://app.codeship.com/projects/249725)
+[![Build Status](https://drone.albertyw.com/api/badges/albertyw/ios_config_profile/status.svg)](https://drone.albertyw.com/albertyw/ios_config_profile)
 [![Dependency Status](https://img.shields.io/librariesio/release/rubygems/ios_config_profile.svg)](https://libraries.io/rubygems/ios_config_profile)
 [![Code Climate](https://codeclimate.com/github/albertyw/ios_config_profile/badges/gpa.svg)](https://codeclimate.com/github/albertyw/ios_config_profile)
 [![Test Coverage](https://codeclimate.com/github/albertyw/ios_config_profile/badges/coverage.svg)](https://codeclimate.com/github/albertyw/ios_config_profile/coverage)
