@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "CFPropertyList", "~> 3.0"
   spec.add_dependency "plist", "~> 3.6"
   spec.add_development_dependency "bundler", "~> 2.2"
-  spec.add_development_dependency "rake", ">= 10"
+  spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.4"
   spec.add_development_dependency "rspec-its", "~> 1.2"
   spec.add_development_dependency "simplecov", "~> 0.15"
